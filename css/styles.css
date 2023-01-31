@@ -4,9 +4,12 @@
    --main-btn-color: #FFFFFF;
    --primary-btn-bg-color:#4D5AE5;
    --secondary-btn-bg-color:#F4F4FD;
-   --title-text-color: #434455;
-   --accent-color: #4D5AE5;
-   
+   --accent-btn-bg-color:#404BBF;
+   --title-text-color:#434455;
+   --accent-color:#4D5AE5;
+   --background-color:#F4F4FD;
+   --footer-text-color: #E7E9FC;
+   --footer-logo-color: #F4F4FD;
 }
  
  body {
@@ -17,6 +20,18 @@
  .nav-link:focus,
  .nav-link.current{
      color:var(--accent-color)
+ }
+
+ .address-link:is(:hover, :focus) {
+     color:var(--accent-color);
+  }
+ .btn:is(:hover, :focus) {
+     background-color: var(--accent-btn-bg-color);
+  }
+ .filter-button:is(:hover, :focus){
+     color:var(--main-btn-color);
+     background-color:var(--accent-btn-bg-color);
+
  }
  .link {
      text-decoration: none;
@@ -41,11 +56,10 @@
      font-size: 18px;
      line-height: 1.33;
      letter-spacing: 0.03em;
+     text-transform: uppercase;
  }
 
     
-
-
  /* ----------HEADER----------- */
 
  .header {
@@ -71,33 +85,28 @@
     letter-spacing: 0.02em;
     color: var(--second-title-color);
  } 
- .nav-link:is(:hover, :focus),
- .address-link:is(:hover, :focus)
- {
-    color:var(--accent-color);
- }
+
 
  .address-link {
-   font-weight: 400;
+   font-style: normal;
    font-size: 16px;
    line-height: 1.5;
    letter-spacing: 0.02em;
    color: var(--title-text-color);
  }
  
-  .btn:is(:hover, :focus) {
-       color: #404bbf;
-  }
- /* ----------HERO----------- */
- .hero {}
+  
+   /* ----------HERO----------- */
+ .hero {
+     background-color: var(--second-title-color);
+ }
 
  .hero-title {
-     font-weight: 400;
+     font-weight: 700;
      font-size: 56px;
      line-height: 1.07;
      text-align: center;
      letter-spacing: 0.02em;
-     background-color: var(--second-title-color);
      color: var(--main-title-color);
  }
 
@@ -153,7 +162,9 @@
  .gallery-item {}
 
  /* ----------TEAM----------- */
- .team {}
+ .team {
+     background: var(--background-color);
+ }
  .team-title {
      font-size: 36px;
      line-height: 1.11;
@@ -181,8 +192,6 @@
      font-weight: 500;
      font-size: 16px;
      line-height: 1.5;
-     align-items: center;
-     text-align: center;
      letter-spacing: 0.04em; 
      color: var(--accent-color);
      background: var(--secondary-btn-bg-color);
@@ -212,7 +221,8 @@
      font-size: 18px;
      line-height: 1.17;
      letter-spacing: 0.03em;
-     color: #F4F4FD;
+     text-transform: uppercase;
+     color:var(--footer-logo-color)
  }
 .footer-logo-accent{
      font-family: 'Raleway', sans-serif;
@@ -223,4 +233,5 @@
      color: var(--accent-color);   
 }
 .footer-text{
-  color: #E7E9FC; }  
+     color:var(--footer-text-color); 
+}  
